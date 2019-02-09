@@ -1,3 +1,8 @@
+:root {
+   --subfont: 'Staatliches', cursive;
+   --mainfont: 'Nunito Sans', sans-serif;
+}
+
 body {
    margin: 0;
    width: 100vw;
@@ -7,11 +12,129 @@ body {
 
 .main {
    width: 800px;
-   height: 90vh;
+   height: 85vh;
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
    background: #FFF;
    border-radius: 10px;
+   padding: 20px;
+}
+
+h2 {
+   font-family: var(--mainfont);
+   font-size: 50px;
+   float: left;
+   clear: both;
+   margin-top: 30px;
+   text-align: center;
+}
+
+
+h3 {
+   font-family: var(--subfont);
+   font-size: 30px;
+   margin: 0;
+   float: left;
+   margin-top: 20px;
+   color: #888;
+   letter-spacing: 2px;
+}
+
+.answers {
+   width: calc(100% - 40px);
+   background: #CCC;
+   position: absolute;
+   bottom: 40px;
+   left: 20px;
+}
+
+.choices {
+   width: 100%;
+   float: left;
+}
+
+.option {
+   width: 48%;
+   height: 100px;
+   margin: 1%;
+   float: left;
+   background: #999;
+   border-radius: 10px;
+   font-family: var(--mainfont);
+   color: #FFF;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.o1 {background: #F40000;}
+.o2 {background: #FFCE30;}
+.o3 {background: #4056F4;}
+.o4 {background: #7CB518;}
+
+.option p {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   margin: 0;
+   text-decoration: none;
+}
+
+.timerCon {
+   width: calc(100% - 40px);
+   height: 10px;
+   background: #FFF;
+   position: absolute;
+   bottom: 20px;
+   left: 20px;
+   animation: coveranswers 100ms ease-in-out forwards;
+   animation-delay: 10s;
+}
+
+.duration {
+   width: 100%;
+   height: 10px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: red;
+   animation: countdown 10s linear forwards;
+}
+
+.failed {
+   height: 0px;
+   overflow: hidden;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation: open 10ms ease-in forwards;
+   animation-delay: 10100ms;
+}
+
+.o5 {
+   width: 290px;
+   height: 90px;
+   margin: 0;
+   border: 5px solid #F00;
+   color: #F00;
+   background: #FFF;
+}
+
+@keyframes countdown {
+   0%    {width: 100%;}
+   100%  {width: 0%;}
+}
+
+@keyframes coveranswers {
+   0%    {height: 500px;}
+   100%  {height: 500px;}
+}
+
+@keyframes open {
+   0%    {width: 300px; height: 0px;}
+   100%  {width: 300px; height: 100px;}
 }
