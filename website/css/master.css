@@ -1,5 +1,5 @@
 :root {
-   --subfont: 'Staatliches', cursive;
+   --subfont: 'Staatliches', sans-serif;
    --mainfont: 'Nunito Sans', sans-serif;
 }
 
@@ -122,6 +122,68 @@ h3 {
    border: 5px solid #F00;
    color: #F00;
    background: #FFF;
+}
+
+.results {
+   float: left;
+   width: 100%;
+   text-align: center;
+
+}
+
+.results h2 {
+   text-align: center;
+   float: none;
+   color: #FFF;
+   border-radius: 10px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 300px;
+   text-transform: uppercase;
+}
+
+.results .correct {background: #16CE44;}
+.results .incorrect {background: #F40000;}
+
+.results p {
+   clear: both;
+   font-family: var(--mainfont);
+   font-size: 30px;
+   text-align: center;
+}
+
+.results p:first-of-type {
+   font-family: var(--subfont);
+   text-transform: uppercase;
+}
+
+.buttonCon {
+   position: absolute;
+   bottom: 20px;
+   left: 20px;
+   width: calc(100% - 40px);
+   background: pink;
+}
+
+.button {
+   position: absolute;
+   bottom: 0;
+   background: yellow;
+   padding: 0px 30px;
+   font-family: var(--mainfont);
+   font-size: 30px;
+   border-radius: 10px;
+   color: #FFF;
+}
+
+.home {
+   left: 0;
+   background: red;
+}
+
+.next {
+   right: 0;
+   background: #55C;
 }
 
 @keyframes countdown {
