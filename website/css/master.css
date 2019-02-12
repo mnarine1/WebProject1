@@ -28,18 +28,22 @@ body {
    border: 15px solid #444;
 }
 
+.frontpage {
+   width: 600px;
+   height: 60vh;
+}
+
 a {text-decoration: none;}
 
 h1 {
-   font-family: 'Bowlby One SC', sans-serif;
-   //font-family: var(--subfont);
+   font-family: 'Anton', sans-serif;
    text-transform: uppercase;
    font-size: 90px;
    position: absolute;
    top: 30%;
    left: 50%;
    transform: translate(-50%, -50%);
-   letter-spacing: 5px;
+   letter-spacing: 15px;
    width: 100%;
    text-align: center;
    margin: 0;
@@ -91,7 +95,8 @@ h4 {
 
 #big {
    font-size: 150px;
-   color: #F00;
+   color: #5380FC;
+   letter-spacing: 20px;
 }
 
 #title {
@@ -137,7 +142,7 @@ h4 {
 
 .mainButtons {
    position: absolute;
-   top: 60%;
+   top: 70%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
