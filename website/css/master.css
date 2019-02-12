@@ -3,6 +3,7 @@
    --mainfont: 'Nunito Sans', sans-serif;
    --accent1: #fff600;
    --accent2: #ffcc00;
+   --timerDur: 10s;
 }
 
 body {
@@ -31,14 +32,19 @@ a {text-decoration: none;}
 
 h1 {
    font-family: 'Bowlby One SC', sans-serif;
-   font-size: 70px;
+   //font-family: var(--subfont);
+   text-transform: uppercase;
+   font-size: 90px;
    position: absolute;
-   top: 20%;
+   top: 30%;
    left: 50%;
    transform: translate(-50%, -50%);
    letter-spacing: 5px;
    width: 100%;
    text-align: center;
+   margin: 0;
+   line-height: 90px;
+   color: #000;
 }
 
 h2 {
@@ -83,9 +89,55 @@ h4 {
    text-align: center;
 }
 
+#big {
+   font-size: 150px;
+   color: #F00;
+}
+
+#title {
+   opacity: 0;
+   animation: type 1ms linear forwards 2000ms;
+}
+
+.anim {
+   position: absolute;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation: disappear 1ms linear forwards 2000ms;
+}
+
+.anim span {
+   font-family: Arial, sans-serif;
+   font-size: 30px;
+   font-weight: bold;
+   opacity: 0;
+   animation: type 1ms linear forwards;
+}
+
+#t1 {animation-delay: 200ms;}
+#t2 {animation-delay: 300ms;}
+#t3 {animation-delay: 400ms;}
+#t4 {animation-delay: 500ms;}
+#t5 {animation-delay: 600ms;}
+#t6 {animation-delay: 700ms;}
+#t7 {animation-delay: 800ms;}
+#t8 {animation-delay: 900ms;}
+#t9 {animation-delay: 1000ms;}
+#t10 {animation-delay: 1100ms;}
+#t11 {animation-delay: 1200ms;}
+#t12 {animation-delay: 1300ms;}
+#t13 {animation-delay: 1400ms;}
+#t14 {animation-delay: 1500ms;}
+#t15 {animation-delay: 1600ms;}
+#t16 {animation-delay: 1700ms;}
+#t17 {animation-delay: 1800ms;}
+#t18 {animation-delay: 1900ms;}
+#t19 {animation-delay: 2000ms;}
+
 .mainButtons {
    position: absolute;
-   top: 50%;
+   top: 60%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
@@ -98,16 +150,14 @@ h4 {
    border-radius: 10px;
    font-family: var(--subfont);
    font-size: 40px;
-   margin: 20px;
+   margin: 40px;
    cursor: pointer;
 }
 
 .start {background: #16CE44;}
+.start:hover {background: #27DF55;}
 .howto {background: #F40000;}
-
-.gamebutton:hover {
-   box-shadow: 0 0 20px #FF0;
-}
+.howto:hover {background: #F54444;}
 
 .namecon {
    position: absolute;
@@ -165,7 +215,7 @@ h4 {
    bottom: 20px;
    left: 20px;
    animation: coveranswers 100ms ease-in-out forwards;
-   animation-delay: 10s;
+   animation-delay: var(--timerDur);
 }
 
 .duration {
@@ -175,7 +225,7 @@ h4 {
    top: 0;
    left: 0;
    background: red;
-   animation: countdown 10s linear forwards;
+   animation: countdown var(--timerDur) linear forwards;
 }
 
 .failed {
@@ -186,7 +236,7 @@ h4 {
    left: 50%;
    transform: translate(-50%, -50%);
    animation: open 10ms ease-in forwards;
-   animation-delay: 10100ms;
+   animation-delay: calc(var(--timerDur) + 100ms);
 }
 
 .o5 {
@@ -259,6 +309,50 @@ h4 {
    background: #264EEF;
 }
 
+.sparkleCon {
+   width: 100%;
+   height: 300px;
+   position: absolute;
+   left: 0;
+   overflow: hidden;
+}
+
+.sparkle {
+   width: 900px;
+   height: 900px;
+   background: repeating-conic-gradient(#FF0F 0deg, #FF0F 10deg, #FFF0 10deg, #FFF0 20deg), radial-gradient(#FF0F, #FF00 30%);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation: spinner 30s infinite linear;
+}
+
+.sparklefade {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: radial-gradient(#FFF0, #FFFF 60%);
+}
+
+.congrats {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation: zoom 1s cubic-bezier(0.725, 0.000, 1.000, 0.825) forwards;
+   text-transform: uppercase;
+}
+
+.congrats h2 {
+   font-size: 100px;
+   color: #FF0;
+   margin: 0;
+   text-shadow: 5px 5px #FFF, -5px 5px #FFF, 5px -5px #FFF, -5px -5px #FFF;
+}
+
 @keyframes countdown {
    0%    {width: 100%;}
    100%  {width: 0%;}
@@ -274,6 +368,27 @@ h4 {
    100%  {width: 300px; height: 100px;}
 }
 
+@keyframes spinner {
+   0%    {transform: translate(-50%, -50%) rotate(0deg);}
+   50%   {transform: translate(-50%, -50%) rotate(180deg);}
+   100%  {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+@keyframes zoom {
+   0%    {transform: translate(-50%, -50%) scale(0);}
+   100%  {transform: translate(-50%, -50%) scale(1);}
+}
+
+@keyframes type {
+   0%    {opacity: 0;}
+   100%  {opacity: 1;}
+}
+
+@keyframes disappear {
+   0%    {opacity: 1;}
+   100%  {opacity: 0;}
+}
+
 @-webkit-keyframes countdown {
    0%    {width: 100%;}
    100%  {width: 0%;}
@@ -287,4 +402,15 @@ h4 {
 @-webkit-keyframes open {
    0%    {width: 300px; height: 0px;}
    100%  {width: 300px; height: 100px;}
+}
+
+@-webkit-keyframes spinner {
+   0%    {transform: translate(-50%, -50%) rotate(0deg);}
+   50%   {transform: translate(-50%, -50%) rotate(180deg);}
+   100%  {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+@-webkit-keyframes zoom {
+   0%    {transform: translate(-50%, -50%) scale(0);}
+   100%  {transform: translate(-50%, -50%) scale(1);}
 }
