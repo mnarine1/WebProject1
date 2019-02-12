@@ -1,6 +1,8 @@
 :root {
    --subfont: 'Staatliches', sans-serif;
    --mainfont: 'Nunito Sans', sans-serif;
+   --accent1: #fff600;
+   --accent2: #ffcc00;
 }
 
 body {
@@ -8,6 +10,7 @@ body {
    width: 100vw;
    height: 100vh;
    background: #333;
+   background: radial-gradient(#4000 30%, #400A), repeating-conic-gradient(var(--accent1) 0deg, var(--accent1) 10deg, var(--accent2) 10deg, var(--accent2) 20deg);
 }
 
 .main {
@@ -18,8 +21,9 @@ body {
    left: 50%;
    transform: translate(-50%, -50%);
    background: #FFF;
-   border-radius: 10px;
+   border-radius: 20px;
    padding: 20px;
+   box-shadow: 0 10px 50px #0008;
 }
 
 h2 {
@@ -44,7 +48,6 @@ h3 {
 
 .answers {
    width: calc(100% - 40px);
-   background: #CCC;
    position: absolute;
    bottom: 40px;
    left: 20px;
@@ -71,7 +74,7 @@ h3 {
 .o1 {background: #F40000;}
 .o2 {background: #FFCE30;}
 .o3 {background: #4056F4;}
-.o4 {background: #7CB518;}
+.o4 {background: #00E007;}
 
 .option p {
    position: relative;
@@ -120,8 +123,8 @@ h3 {
    height: 90px;
    margin: 0;
    border: 5px solid #F00;
-   color: #F00;
-   background: #FFF;
+   color: #FFF;
+   background: #F00;
 }
 
 .results {
@@ -197,6 +200,21 @@ h3 {
 }
 
 @keyframes open {
+   0%    {width: 300px; height: 0px;}
+   100%  {width: 300px; height: 100px;}
+}
+
+@-webkit-keyframes countdown {
+   0%    {width: 100%;}
+   100%  {width: 0%;}
+}
+
+@-webkit-keyframes coveranswers {
+   0%    {height: 500px;}
+   100%  {height: 500px;}
+}
+
+@-webkit-keyframes open {
    0%    {width: 300px; height: 0px;}
    100%  {width: 300px; height: 100px;}
 }
