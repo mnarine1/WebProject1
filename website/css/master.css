@@ -26,6 +26,18 @@ body {
    box-shadow: 0 10px 50px #0008;
 }
 
+h1 {
+   font-family: 'Bowlby One SC', sans-serif;
+   font-size: 70px;
+   position: absolute;
+   top: 20%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   letter-spacing: 5px;
+   width: 100%;
+   text-align: center;
+}
+
 h2 {
    font-family: var(--mainfont);
    font-size: 50px;
@@ -35,7 +47,6 @@ h2 {
    text-align: center;
 }
 
-
 h3 {
    font-family: var(--subfont);
    font-size: 30px;
@@ -44,6 +55,41 @@ h3 {
    margin-top: 20px;
    color: #888;
    letter-spacing: 2px;
+}
+
+h4 {
+   font-family: var(--mainfont);
+   font-size: 20px;
+}
+
+.mainButtons {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.gamebutton {
+   padding: 10px 20px;
+   background: #05F;
+   text-align: center;
+   color: #000;
+   border-radius: 10px;
+   font-family: var(--subfont);
+   font-size: 40px;
+   margin: 20px;
+}
+
+.gamebutton:hover {
+   box-shadow: 0 0 20px #FF0;
+}
+
+.namecon {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   text-align: center;
 }
 
 .answers {
@@ -165,7 +211,6 @@ h3 {
    bottom: 20px;
    left: 20px;
    width: calc(100% - 40px);
-   background: pink;
 }
 
 .button {
