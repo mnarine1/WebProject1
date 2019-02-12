@@ -65,6 +65,24 @@ h4 {
    font-size: 20px;
 }
 
+#htp {
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+#instruct {
+   width: 90%;
+   position: absolute;
+   top: 200px;
+   left: 50%;
+   transform: translate(-50%);
+   font-size: 25px;
+   font-family: var(--mainfont);
+   text-align: center;
+}
+
 .mainButtons {
    position: absolute;
    top: 50%;
@@ -83,6 +101,9 @@ h4 {
    margin: 20px;
    cursor: pointer;
 }
+
+.start {background: #16CE44;}
+.howto {background: #F40000;}
 
 .gamebutton:hover {
    box-shadow: 0 0 20px #FF0;
@@ -230,12 +251,12 @@ h4 {
 
 .home {
    left: 0;
-   background: red;
+   background: #EF2525;
 }
 
 .next {
    right: 0;
-   background: #55C;
+   background: #264EEF;
 }
 
 @keyframes countdown {
