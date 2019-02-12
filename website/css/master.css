@@ -21,10 +21,13 @@ body {
    left: 50%;
    transform: translate(-50%, -50%);
    background: #FFF;
-   border-radius: 20px;
+   border-radius: 30px;
    padding: 20px;
-   box-shadow: 0 10px 50px #0008;
+   box-shadow: 0 10px 50px #0008, 0 0 10px #0008 inset;
+   border: 15px solid #444;
 }
+
+a {text-decoration: none;}
 
 h1 {
    font-family: 'Bowlby One SC', sans-serif;
@@ -78,6 +81,7 @@ h4 {
    font-family: var(--subfont);
    font-size: 40px;
    margin: 20px;
+   cursor: pointer;
 }
 
 .gamebutton:hover {
